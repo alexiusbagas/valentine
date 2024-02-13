@@ -1,0 +1,172 @@
+body {
+    background-color: #FFD8E7;
+    padding: 70px;
+}
+
+.envelope-wrapper {
+    height: 380px;
+
+}
+
+#envelope {
+    position: relative;
+    height: 280px;
+    width: 450px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    background-color: #ED4F8B;
+}
+
+#envelope:hover {
+    cursor: pointer;
+}
+
+.front {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 3;
+}
+
+.flap {
+    border-top: 142px solid #ff80ca;
+    border-left: 225px solid transparent;
+    border-right: 225px solid transparent;
+    border-Bottom: 142px solid transparent;
+    transform-origin: top;
+}
+
+.pocket {
+    border-right: 225px solid #fc9dd4;
+    border-bottom: 145px solid #ff8fd0;
+    border-left: 225px solid #fc9dd4;
+    border-top: 140px solid transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.letter {
+    position: relative;
+    background-color: whitesmoke;
+    width: 95%;
+    height: 95%;
+    top: 5%;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.letter.after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.words {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 15%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.line1 {
+    font-size: 24px;
+}
+
+.line2 {
+    top: 20%;
+}
+.line3 {
+    top: 27%;
+}
+
+.line4 {
+    top: 34%;
+}
+
+.line5 {
+    top: 41%;
+}
+
+.line6 {
+    top: 48%;
+}
+
+.line7 {
+    top: 65%;
+    font-size: 20px;
+    text-align: right;
+}
+
+.line8 {
+    top: 72%;
+    font-size: 22px;
+    text-align: right;
+}
+
+.open .flap {
+    transform: rotatex(180deg);
+    transition: transform 0.4s ease, z-index 0.6s;
+    z-index: 1;
+}
+
+.close .flap {
+    transform: rotatex(0deg);
+    transition: transform 0.4s 0.6s ease, z-index 1s;
+    z-index: 5'
+}
+
+.open .letter {
+    transform: translatey(-210px);
+    transition: transform 0.4s 0.6s ease, z-index 0.6s;
+    z-index: 2;
+}
+
+.close .letter {
+    transform: translatey(0deg);
+    transition: transform 0.4s ease, z-index 1s;
+    z-index: 1;
+}
+
+.reset {
+    text-align: center;
+    margin: 120px;
+}
+
+.reset button {
+    font-weight: 800;
+    font-style: normal;
+    transition: all 0,1s linear;
+    background-color: #ff91e7;
+    border: transparent;
+    border-radius: 50px;
+    color: #ffe7f5;
+    font-size: 20px;
+    margin: 50px;
+    padding: 10px;
+    line-height: 1cm;
+    text-decoration: none;
+    min-width: 200px;
+    outline: none;
+}
+
+.reset button:hover {
+    background-color: rgb(255, 103, 149);
+    cursor: pointer;
+    color: white;
+}
+
+.valentine {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 103, 149);
+    font-size: 50px;
+}
